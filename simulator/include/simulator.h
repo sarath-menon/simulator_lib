@@ -1,4 +1,5 @@
 #pragma once
+#include "safety_checks.h"
 #include <matrix/math.hpp>
 #include <yaml-cpp/yaml.h>
 
@@ -23,7 +24,7 @@ private:
 
 public:
   // Loads the quadcopter properties from the yaml file
-  void set_parameters(std::string path);
+  void set_parameters(const std::string &path);
 
   // Integrators
 public:

@@ -1,6 +1,9 @@
 #include "simulator.h"
 
-void Simulator::set_parameters(std::string path) {
+void Simulator::set_parameters(const std::string &path) {
+
+  // Safety check, see if file exists
+  safety_checks::yaml_file_check(path);
 
   // Load simulation properties from yaml file
   YAML::Node yaml_file = YAML::LoadFile(path);
